@@ -9,7 +9,11 @@ describe('My First Puppeteer Test', () => {
     it('should launch the browser', async function() {
         // headless = always opens the browser 
         // headed = does the test in the background
-        const browser = await puppeteer.launch({headless: false});
+        // can slow the test down to view it 
+        const browser = await puppeteer.launch({
+            headless: false, 
+            slowMo: 100, 
+            devtools: true});
         const page = await browser.newPage();
         await page.goto('https://example.com/');
         // assertion
