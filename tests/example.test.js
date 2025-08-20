@@ -21,6 +21,15 @@ describe('My First Puppeteer Test', () => {
         // reload/refreshing the browser
         await page.reload();
         await page.waitForSelector('body div h1');
+        // navigates to other website
+        await page.goto('https://dev.to/');
+        await page.waitForSelector('.site-logo__img');
+        // simulates clicking the go back button in browser
+        await page.goBack();
+        await page.waitForSelector('body div h1');
+        // simulates clicking the to go forward button in browser
+        await page.goForward();
+        await page.waitForSelector('.site-logo__img');
         await browser.close();
     });
 });

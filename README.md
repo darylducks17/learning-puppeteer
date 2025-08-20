@@ -8,7 +8,8 @@ Learning Puppeteer for Front End Performance Testing.
 - Prettier Setup
 - Launch Chrome Browser
 - Browser Options
-- Reload/ Refresh Browser
+- Reload / Refresh Browser
+- Go Back & Forward
 
 ## What is Front End Performance Testing?
 
@@ -99,3 +100,10 @@ await page.reload();
 ```
 
 - reload/refreshing the browser.
+
+```JavaScript
+await page.goBack();
+await page.goForward();
+```
+
+- simulates clicking the go back/forward button in browser
