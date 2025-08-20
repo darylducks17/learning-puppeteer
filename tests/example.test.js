@@ -18,6 +18,9 @@ describe('My First Puppeteer Test', () => {
         await page.goto('https://example.com/');
         // assertion
         await page.waitForSelector('body div h1');
+        // reload/refreshing the browser
+        await page.reload();
+        await page.waitForSelector('body div h1');
         await browser.close();
     });
 });

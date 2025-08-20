@@ -8,6 +8,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Prettier Setup
 - Launch Chrome Browser
 - Browser Options
+- Reload/ Refresh Browser
 
 ## What is Front End Performance Testing?
 
@@ -61,6 +62,7 @@ Learning Puppeteer for Front End Performance Testing.
 - It is developed by the Chrome DevTools team released Puppeteer in 2017.
 - Google owns Puppeteer and the Chrome team maintains it, but it's developed as an open-source project.
 - Very quick test execution compared to other testing frameworks.
+- Functions are readable even for non-technical people
 
 ## Notes
 
@@ -91,3 +93,9 @@ const browser = await puppeteer.launch({headless: false, slowMo: 500, devtools: 
 - headed = does the test in the background.
 - can slow the test down with specified time to view the process.
 - devtools can be opened during the tests.
+
+```JavaScript
+await page.reload();
+```
+
+- reload/refreshing the browser.
