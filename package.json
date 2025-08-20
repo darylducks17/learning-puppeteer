@@ -1,0 +1,29 @@
+{
+  "name": "learning-puppeteer",
+  "version": "1.0.0",
+  "description": "learning puppeteer for front end performance testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darylducks17/learning-puppeteer.git"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Automation"
+  ],
+  "author": "DJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darylducks17/learning-puppeteer/issues"
+  },
+  "homepage": "https://github.com/darylducks17/learning-puppeteer#readme",
+  "dependencies": {
+    "chai": "^5.3.1",
+    "mocha": "^11.7.1",
+    "prettier": "^3.6.2",
+    "puppeteer": "^24.16.2"
+  }
+}
