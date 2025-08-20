@@ -4,7 +4,7 @@
   "description": "learning puppeteer for front end performance testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha.js --timeout=30000 ./tests"
   },
   "repository": {
     "type": "git",

@@ -6,6 +6,7 @@ Learning Puppeteer for Front End Performance Testing.
 
 - Project Setup
 - Prettier Setup
+- Launch Chrome Browser
 
 ## What is Front End Performance Testing?
 
@@ -33,7 +34,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Optimising page load times through frontend performance testing is the key to addressing this issue and retaining customers.
 - Frontend performance testing helps businesses identify and resolve load-related issues before a website or application is launched.
 
-### Key Metrics for Performance Front End Testing
+## Key Metrics for Performance Front End Testing
 
 - **Performance Score**
   - This is a comprehensive rating that takes into account various aspects of page performance.
@@ -51,3 +52,38 @@ Learning Puppeteer for Front End Performance Testing.
 - **Input Latency**
   - Input latency measures the delay between a user’s input (like a click or keystroke) and the page’s response.
   - High input latency can lead to frustration and negatively impact the user experience.
+
+## About Puppeteer
+
+- Puppeteer is a JavaScript (Node.js) library which provides a high-level API to control Chrome or Firefox over the [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) or [WebDriver BiDi](https://pptr.dev/webdriver-bidi). Puppeteer runs in the headless (no visible UI) by default.
+- Use it to automate anything in the browser, from taking screenshots and generating PDFs to navigating through and testing complex UIs and analysing performance.
+- It is developed by the Chrome DevTools team released Puppeteer in 2017.
+- Google owns Puppeteer and the Chrome team maintains it, but it's developed as an open-source project.
+
+## Notes
+
+```JavaScript
+const puppeteer = require('puppeteer');
+```
+
+- requires the module to access to puppeteer - gives us access to everything in puppeteer package.
+
+```JavaScript
+describe('My First Puppeteer Test'() => {};
+```
+
+- describe = wrapper around test steps, depends on the context.
+  
+```JavaScript
+it('should launch the browser', async function() {} );
+```
+
+- can have many it blocks/ test steps inside the describe block.
+- puppeteer uses async functions.
+
+```JavaScript
+const browser = await puppeteer.launch({headless: false});
+```
+
+- headless = always opens the browser.
+- headed = does the test in the background
