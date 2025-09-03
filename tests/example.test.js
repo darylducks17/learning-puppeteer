@@ -32,4 +32,15 @@ describe('My First Puppeteer Test', () => {
         await page.waitForSelector('.site-logo__img');
         await browser.close();
     });
+    it('inputs', async function() {
+        const browser = await puppeteer.launch({
+            headless: false, 
+            slowMo: 100, 
+            devtools: true});
+        const page = await browser.newPage();
+        await page.goto('https://devexpress.github.io/testcafe/example/')
+        // best not to use delay as it will slow down the test automation
+        await page.type('#developer-name', 'DJ', {delay: 0});
+        await browser.close();
+    });
 });

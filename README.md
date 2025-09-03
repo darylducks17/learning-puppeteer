@@ -10,6 +10,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Browser Options
 - Reload / Refresh Browser
 - Go Back & Forward
+- Inputs
 
 ## What is Front End Performance Testing?
 
@@ -107,3 +108,10 @@ await page.goForward();
 ```
 
 - simulates clicking the go back/forward button in browser
+
+```JavaScript
+await page.type( 'dom element', 'typeWhatever', {delay: 0});
+```
+
+- inputs text.
+- best not to use any delays otherwise it will lengthen the automation.
