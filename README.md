@@ -11,6 +11,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Reload / Refresh Browser
 - Go Back & Forward
 - Inputs
+- Buttons
 
 ## What is Front End Performance Testing?
 
@@ -115,3 +116,10 @@ await page.type( 'dom element', 'typeWhatever', {delay: 0});
 
 - inputs text.
 - best not to use any delays otherwise it will lengthen the automation.
+
+```JavaScript
+ await page.click('#tried-test-cafe', {clickCount: 1});
+```
+
+- clicks buttons. 
+- clickCount repeatedly clicks element for the said number of times.

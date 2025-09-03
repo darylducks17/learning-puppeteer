@@ -32,7 +32,7 @@ describe('My First Puppeteer Test', () => {
         await page.waitForSelector('.site-logo__img');
         await browser.close();
     });
-    it('inputs', async function() {
+    it('inputs, buttons', async function() {
         const browser = await puppeteer.launch({
             headless: false, 
             slowMo: 100, 
@@ -41,6 +41,10 @@ describe('My First Puppeteer Test', () => {
         await page.goto('https://devexpress.github.io/testcafe/example/')
         // best not to use delay as it will slow down the test automation
         await page.type('#developer-name', 'DJ', {delay: 0});
+        // buttons
+        // clickCount repeatedly clicks element for the said number of times
+        await page.click('#tried-test-cafe', {clickCount: 1});
         await browser.close();
+
     });
 });
