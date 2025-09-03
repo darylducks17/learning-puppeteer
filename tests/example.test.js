@@ -32,7 +32,7 @@ describe('My First Puppeteer Test', () => {
         await page.waitForSelector('.site-logo__img');
         await browser.close();
     });
-    it('inputs, buttons', async function() {
+    it('inputs, buttons and dropdowns', async function() {
         const browser = await puppeteer.launch({
             headless: false, 
             slowMo: 100, 
@@ -44,6 +44,13 @@ describe('My First Puppeteer Test', () => {
         // buttons
         // clickCount repeatedly clicks element for the said number of times
         await page.click('#tried-test-cafe', {clickCount: 1});
+        // dropdowns
+        await page.select('#preferred-interface', 'Javascript API');
+        // text area 
+        const message = 'Lets fill the message with some text'
+        await page.type('#comments', message);
+        await page.click('#submit-button');
+        await page.waitForSelector('.result-content')
         await browser.close();
 
     });

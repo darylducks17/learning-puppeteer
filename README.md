@@ -12,6 +12,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Go Back & Forward
 - Inputs
 - Buttons
+- Dropdowns
 
 ## What is Front End Performance Testing?
 
@@ -123,3 +124,9 @@ await page.type( 'dom element', 'typeWhatever', {delay: 0});
 
 - clicks buttons. 
 - clickCount repeatedly clicks element for the said number of times.
+
+```JavaScript
+await page.select('#preferred-interface', 'Javascript API');
+```
+
+- selects one of the dropdown options.
