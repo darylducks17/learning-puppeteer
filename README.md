@@ -13,7 +13,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Inputs
 - Buttons
 - Dropdowns
-- Extracting URL and Titles
+- Extracting URL, Titles, Text and Element Counts
 
 ## What is Front End Performance Testing?
 
@@ -123,7 +123,7 @@ await page.type( 'dom element', 'typeWhatever', {delay: 0});
  await page.click('#tried-test-cafe', {clickCount: 1});
 ```
 
-- clicks buttons. 
+- clicks buttons.
 - clickCount repeatedly clicks element for the said number of times.
 
 ```JavaScript
@@ -133,8 +133,11 @@ await page.select('#preferred-interface', 'Javascript API');
 - selects one of the dropdown options.
 
 ```JavaScript
-await page.title()
-await page.url()
+await page.title();
+await page.url();
+await page.$eval('text', element => element.textContent);
+await page.$$eval('p', element => element.length)
+
 ```
 
-- extracts title and url from the webpage.
+- extracts title, url, text and element count from the webpage.
