@@ -36,7 +36,8 @@ describe('My First Puppeteer Test', () => {
         const browser = await puppeteer.launch({
             headless: false, 
             slowMo: 100, 
-            devtools: true});
+            devtools: true
+        });
         const page = await browser.newPage();
         await page.goto('https://devexpress.github.io/testcafe/example/')
         // best not to use delay as it will slow down the test automation
@@ -53,5 +54,20 @@ describe('My First Puppeteer Test', () => {
         await page.waitForSelector('.result-content')
         await browser.close();
 
+    });
+
+    it('working with title and URL', async function() {
+        const browser = await puppeteer.launch({
+            headless: false, 
+            slowMo: 100, 
+            devtools: true
+        });
+        const page  = await browser.newPage();
+        await page.goto('http://example.com/');
+        const title = await page.title();
+        const url = await page.url();
+        console.log('TITLE ' + title);
+        console.log('URL ' + url);
+        await browser.close(); 
     });
 });

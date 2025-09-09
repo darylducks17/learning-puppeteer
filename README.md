@@ -13,6 +13,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Inputs
 - Buttons
 - Dropdowns
+- Extracting URL and Titles
 
 ## What is Front End Performance Testing?
 
@@ -130,3 +131,10 @@ await page.select('#preferred-interface', 'Javascript API');
 ```
 
 - selects one of the dropdown options.
+
+```JavaScript
+await page.title()
+await page.url()
+```
+
+- extracts title and url from the webpage.
