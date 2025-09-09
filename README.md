@@ -14,6 +14,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Buttons
 - Dropdowns
 - Extracting URL, Titles, Text and Element Counts
+- Assertions
 
 ## What is Front End Performance Testing?
 
