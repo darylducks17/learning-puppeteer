@@ -63,6 +63,10 @@ describe('My First Puppeteer Test', () => {
             slowMo: 100, 
             devtools: true
         });
+        //overrides the default one of 30 seconds
+        await page.setDefaultTimeout(10000);
+        //overrides the timeout above
+        await page.setDefaultNavigationTimeout(20000)
         const page  = await browser.newPage();
         await page.goto('http://example.com/');
         const title = await page.title();

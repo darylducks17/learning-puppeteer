@@ -15,6 +15,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Dropdowns
 - Extracting URL, Titles, Text and Element Counts
 - Assertions
+- Timeouts
 
 ## What is Front End Performance Testing?
 
@@ -142,3 +143,12 @@ await page.$$eval('p', element => element.length)
 ```
 
 - extracts title, url, text and element count from the webpage.
+
+```JavaScript
+//overrides the default one of 30 seconds
+await page.setDefaultTimeout(10000);
+//overrides the timeout above
+await page.setDefaultNavigationTimeout(20000)
+```
+
+- setting timeouts for the specific describe/it block
