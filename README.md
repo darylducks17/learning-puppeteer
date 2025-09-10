@@ -16,6 +16,7 @@ Learning Puppeteer for Front End Performance Testing.
 - Extracting URL, Titles, Text and Element Counts
 - Assertions
 - Timeouts
+- Keyboard Press
 
 ## What is Front End Performance Testing?
 
@@ -138,7 +139,7 @@ await page.select('#preferred-interface', 'Javascript API');
 await page.title();
 await page.url();
 await page.$eval('text', element => element.textContent);
-await page.$$eval('p', element => element.length)
+await page.$$eval('p', element => element.length);
 
 ```
 
@@ -148,7 +149,14 @@ await page.$$eval('p', element => element.length)
 //overrides the default one of 30 seconds
 await page.setDefaultTimeout(10000);
 //overrides the timeout above
-await page.setDefaultNavigationTimeout(20000)
+await page.setDefaultNavigationTimeout(20000);
 ```
 
 - setting timeouts for the specific describe/it block
+
+```JavaScript
+await page.keyboard.press('Enter');
+// can be any key on the keyboard
+```
+
+- automated keyboard pressing

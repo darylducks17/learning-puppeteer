@@ -57,16 +57,16 @@ describe('My First Puppeteer Test', () => {
 
     });
 
-    it('working with title and URL', async function() {
+    it.only('working with title and URL', async function() {
         const browser = await puppeteer.launch({
             headless: false, 
             slowMo: 100, 
             devtools: true
         });
         //overrides the default one of 30 seconds
-        await page.setDefaultTimeout(10000);
+        // await page.setDefaultTimeout(10000);
         //overrides the timeout above
-        await page.setDefaultNavigationTimeout(20000)
+        //await page.setDefaultNavigationTimeout(20000);
         const page  = await browser.newPage();
         await page.goto('http://example.com/');
         const title = await page.title();
@@ -78,6 +78,13 @@ describe('My First Puppeteer Test', () => {
         expect(url).to.include('example.com');
         expect(text).to.be.a('string', 'Example Domain');
         expect(count).to.equal(2);
+
+        //keyboard press
+        await page.goto('https://www.saucedemo.com/');
+        await page.waitForSelector('.login_logo');
+        await page.type('#user-name', 'standard_user');
+        await page.keyboard.press('Enter', {delay: 10});
+        
         await browser.close(); 
     });
 });
