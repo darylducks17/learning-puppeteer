@@ -57,7 +57,7 @@ describe('My First Puppeteer Test', () => {
 
     });
 
-    it.only('working with title and URL', async function() {
+    it('working with title and URL', async function() {
         const browser = await puppeteer.launch({
             headless: false, 
             slowMo: 100, 

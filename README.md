@@ -17,6 +17,8 @@ Learning Puppeteer for Front End Performance Testing.
 - Assertions
 - Timeouts
 - Keyboard Press
+- HTTPS Intercepts
+- Code Coverage
 
 ## What is Front End Performance Testing?
 
